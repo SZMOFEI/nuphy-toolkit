@@ -1,0 +1,34 @@
+{
+  "name": "nuphy-prd-clarifier",
+  "version": "0.1.0",
+  "description": "Guides NuPhy operators from vague requests to reviewable requirement cards and PRD drafts.",
+  "author": {
+    "name": "NuPhy",
+    "email": "service@nuphy.com",
+    "url": "https://nuphy.com/"
+  },
+  "homepage": "https://github.com/nuphy001/nuphy-prd-clarifier",
+  "repository": "https://github.com/nuphy001/nuphy-prd-clarifier",
+  "license": "MIT",
+  "keywords": ["nuphy", "requirements", "prd", "product-operations"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "NuPhy PRD Clarifier",
+    "shortDescription": "Turn vague requests into clear requirement cards and PRD drafts.",
+    "longDescription": "Guides NuPhy operators through focused questions, identifies missing context, separates facts from assumptions, and produces copy-ready content for the Feishu requirement pool plus a lightweight PRD draft.",
+    "developerName": "NuPhy",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://nuphy.com/",
+    "privacyPolicyURL": "https://nuphy.com/pages/privacy-policy",
+    "termsOfServiceURL": "https://nuphy.com/pages/terms-conditions",
+    "defaultPrompt": [
+      "帮我把这条模糊需求澄清成可提交的需求卡",
+      "一步步补齐这段运营需求，并生成 PRD 草稿",
+      "检查这条需求还缺什么，输出飞书可粘贴版本"
+    ],
+    "brandColor": "#00C7B1",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

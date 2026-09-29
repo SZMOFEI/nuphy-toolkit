@@ -1,0 +1,16 @@
+{
+  "name": "NuPhy PRD Clarifier",
+  "category": "Productivity",
+  "short_description": "Turn vague NuPhy operations requests into clear requirement cards and PRD drafts.",
+  "long_description": "NuPhy PRD Clarifier guides operations teammates through focused, step-by-step questions. It identifies missing context, separates facts from assumptions, creates testable acceptance criteria, and outputs both a Feishu-ready requirement entry and a lightweight PRD draft. It does not change code, publish content, write to Feishu, or decide final priority and engineering complexity.",
+  "developer_name": "NuPhy",
+  "website_url": "https://nuphy.com/",
+  "support_url": "https://nuphy.com/pages/contact-us",
+  "privacy_policy_url": "https://nuphy.com/pages/privacy-policy",
+  "terms_url": "https://nuphy.com/pages/terms-conditions",
+  "logo": "../assets/icon.png",
+  "submission_type": "Skills only",
+  "authentication": "None",
+  "countries_and_regions": "Choose only regions supported by NuPhy legal and support teams in the submission portal.",
+  "screenshots": []
+}

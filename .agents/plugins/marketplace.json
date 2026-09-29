@@ -1,0 +1,20 @@
+{
+  "name": "nuphy-open-plugins",
+  "interface": {
+    "displayName": "NuPhy Open Plugins"
+  },
+  "plugins": [
+    {
+      "name": "nuphy-prd-clarifier",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nuphy-prd-clarifier"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

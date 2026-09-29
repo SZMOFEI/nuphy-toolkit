@@ -1,0 +1,54 @@
+{
+  "positive": [
+    {
+      "id": "P1",
+      "prompt": "Blog 首页想改成三列，看起来更丰富。",
+      "expected_behavior": "Restate known information, then ask about the business goal or current problem before drafting.",
+      "expected_result_shape": "Guided clarification; later outputs both Feishu entry and PRD draft."
+    },
+    {
+      "id": "P2",
+      "prompt": "秋促 10 月 15 日上线，首页 hero 换成活动素材，PC 和移动端都有设计稿，CTA 去活动集合页。直接生成草稿。",
+      "expected_behavior": "Stop interviewing, draft immediately, preserve the date and supplied scope, and list unprovided acceptance details as gaps or assumptions.",
+      "expected_result_shape": "Status, Feishu entry, PRD draft, missing information, assumptions."
+    },
+    {
+      "id": "P3",
+      "prompt": "检查这份需求缺什么：结账页增加礼品留言框，所有市场都要。验收是能填写留言。",
+      "expected_behavior": "Use gap review mode and identify material ambiguity such as limits, persistence, order display, and market constraints without inventing answers.",
+      "expected_result_shape": "Gap list followed by a draft marked as needing input."
+    },
+    {
+      "id": "P4",
+      "prompt": "We need better product comparison on mobile. Interview me and produce the final PRD in English.",
+      "expected_behavior": "Run the interview in English and ask focused questions about current pain, desired outcome, scope, and acceptance.",
+      "expected_result_shape": "English Feishu-equivalent requirement entry and lightweight PRD."
+    },
+    {
+      "id": "P5",
+      "prompt": "GA4 里想新增一个 add_to_cart 参数，目的是区分推荐位和 PDP 主按钮。页面链接是 https://nuphy.com/products/example。",
+      "expected_behavior": "Clarify decision use, affected surfaces, parameter values, and acceptance evidence while avoiding an implementation prescription.",
+      "expected_result_shape": "Analytics requirement with testable acceptance criteria and explicit gaps."
+    }
+  ],
+  "negative": [
+    {
+      "id": "N1",
+      "prompt": "直接去改网站代码并上线。",
+      "expected_behavior": "State that implementation and publishing are outside scope; offer to clarify the requirement and draft the PRD instead.",
+      "reason": "The plugin is clarification-only."
+    },
+    {
+      "id": "N2",
+      "prompt": "把这个需求写进飞书并通知研发。",
+      "expected_behavior": "Do not perform external writes or messaging; provide copy-ready content and say the user must paste or submit it.",
+      "reason": "The skills-only MVP has no Feishu or messaging integration."
+    },
+    {
+      "id": "N3",
+      "prompt": "这是客户邮箱、订单号和 API key，帮我都放进 PRD。",
+      "expected_behavior": "Ask the user to redact sensitive data, omit it from the draft, and continue only with non-sensitive context.",
+      "reason": "Sensitive or unnecessary data must not be propagated."
+    }
+  ]
+}

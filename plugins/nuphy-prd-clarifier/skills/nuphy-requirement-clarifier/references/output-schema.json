@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nuphy.com/schemas/requirement-clarifier-output.schema.json",
+  "title": "NuPhy clarified requirement output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "requirement_pool_entry", "prd_draft", "missing_information", "assumptions"],
+  "properties": {
+    "status": {"enum": ["ready_for_review", "draft_needs_input"]},
+    "requirement_pool_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "background", "current_problem", "expected_result", "page_links", "target_date", "acceptance_criteria"],
+      "properties": {
+        "title": {"type": "string"},
+        "background": {"type": "string"},
+        "current_problem": {"type": "string"},
+        "expected_result": {"type": "string"},
+        "page_links": {"type": "array", "items": {"type": "string"}},
+        "attachment_notes": {"type": "array", "items": {"type": "string"}},
+        "target_date": {"type": ["string", "null"], "format": "date"},
+        "deadline_reason": {"type": ["string", "null"]},
+        "acceptance_criteria": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "prd_draft": {
+      "type": "object",
+      "required": ["goal", "users_and_scenarios", "scope", "non_goals", "requirements", "acceptance_criteria", "dependencies", "risks"],
+      "properties": {
+        "goal": {"type": "string"},
+        "users_and_scenarios": {"type": "array", "items": {"type": "string"}},
+        "scope": {"type": "array", "items": {"type": "string"}},
+        "non_goals": {"type": "array", "items": {"type": "string"}},
+        "requirements": {"type": "array", "items": {"type": "string"}},
+        "acceptance_criteria": {"type": "array", "items": {"type": "string"}},
+        "dependencies": {"type": "array", "items": {"type": "string"}},
+        "risks": {"type": "array", "items": {"type": "string"}},
+        "requester_solution_suggestion": {"type": ["string", "null"]}
+      }
+    },
+    "missing_information": {"type": "array", "items": {"type": "string"}},
+    "assumptions": {"type": "array", "items": {"type": "string"}}
+  }
+}
