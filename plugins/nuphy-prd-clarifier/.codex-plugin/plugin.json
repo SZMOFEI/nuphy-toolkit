@@ -7,8 +7,8 @@
     "email": "service@nuphy.com",
     "url": "https://nuphy.com/"
   },
-  "homepage": "https://github.com/nuphy001/nuphy-prd-clarifier",
-  "repository": "https://github.com/nuphy001/nuphy-prd-clarifier",
+  "homepage": "https://github.com/SZMOFEI/nuphy-prd-clarifier",
+  "repository": "https://github.com/SZMOFEI/nuphy-prd-clarifier",
   "license": "MIT",
   "keywords": ["nuphy", "requirements", "prd", "product-operations"],
   "skills": "./skills/",

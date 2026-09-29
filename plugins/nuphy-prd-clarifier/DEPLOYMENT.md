@@ -21,7 +21,7 @@ This repository includes a marketplace at `.agents/plugins/marketplace.json`. Ad
 This repository can be installed without public-directory approval:
 
 ```bash
-codex plugin marketplace add nuphy001/nuphy-prd-clarifier
+codex plugin marketplace add SZMOFEI/nuphy-prd-clarifier
 codex plugin add nuphy-prd-clarifier@nuphy-open-plugins
 ```
 

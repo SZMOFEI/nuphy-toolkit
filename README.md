@@ -20,7 +20,7 @@
 ### 方式一：直接添加 GitHub Marketplace
 
 ```bash
-codex plugin marketplace add nuphy001/nuphy-prd-clarifier
+codex plugin marketplace add SZMOFEI/nuphy-prd-clarifier
 codex plugin add nuphy-prd-clarifier@nuphy-open-plugins
 ```
 
