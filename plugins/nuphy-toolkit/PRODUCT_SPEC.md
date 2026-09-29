@@ -1,4 +1,10 @@
-# Product specification
+# NuPhy Toolkit product specification
+
+## Product model
+
+NuPhy Toolkit is a shared plugin container for focused NuPhy workflows. Each capability must remain an independently triggered and testable Skill. The plugin grows only when a repeated, real workflow has been validated; it does not attempt to copy ECC's full catalog.
+
+The first capability is requirement clarification.
 
 ## Problem
 

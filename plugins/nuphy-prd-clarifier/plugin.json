@@ -1,6 +1,0 @@
-{
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "nuphy-prd-clarifier",
-  "version": "0.1.0",
-  "description": "Guides NuPhy operators from vague requests to reviewable requirement cards and PRD drafts."
-}

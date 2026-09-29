@@ -1,12 +1,13 @@
-# NuPhy PRD Clarifier — build and release guide
+# NuPhy Toolkit — build and release guide
 
 ## Product decision
 
-**Name:** `nuphy-prd-clarifier`  
-**Public display name:** NuPhy PRD Clarifier  
-**MVP shape:** skills-only plugin  
-**Scope:** guided requirement clarification, gap review, Feishu-ready requirement entry, lightweight PRD draft  
-**Out of scope:** code changes, publishing, Feishu writes, notifications, final priority, engineering estimates
+- **Name:** `nuphy-toolkit`
+- **Public display name:** NuPhy Toolkit
+- **MVP shape:** skills-only plugin
+- **Current Skill:** guided requirement clarification, gap review, Feishu-ready requirement entry, lightweight PRD draft
+- **Growth rule:** add focused Skills only after a repeated NuPhy workflow is validated
+- **Out of scope:** code changes, publishing, Feishu writes, notifications, final priority, engineering estimates
 
 ## Why no API or MCP in v0.1.0
 
@@ -14,15 +15,15 @@ The MVP only transforms information inside the current conversation. A remote se
 
 ## Local test
 
-This repository includes a marketplace at `.agents/plugins/marketplace.json`. Add the repository as a marketplace, install `nuphy-prd-clarifier`, and test it in a new chat with the prompts in `submission/starter-prompts.md`.
+This repository includes a marketplace at `.agents/plugins/marketplace.json`. Add the repository as a marketplace, install `nuphy-toolkit`, and test it in a new chat with the prompts in `submission/starter-prompts.md`.
 
 ## GitHub distribution
 
 This repository can be installed without public-directory approval:
 
 ```bash
-codex plugin marketplace add SZMOFEI/nuphy-prd-clarifier
-codex plugin add nuphy-prd-clarifier@nuphy-open-plugins
+codex plugin marketplace add SZMOFEI/nuphy-toolkit
+codex plugin add nuphy-toolkit@nuphy-open-plugins
 ```
 
 Users can also download the repository ZIP and add the extracted directory as a local marketplace. Repository distribution is separate from the universal public Plugins Directory.

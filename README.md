@@ -1,82 +1,84 @@
-# NuPhy PRD Clarifier
+# NuPhy Toolkit
 
-把模糊的运营需求，通过逐步提问澄清为可直接进入飞书需求池的结构化需求与轻量 PRD。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-这个插件适合 NuPhy 运营、内容、电商、活动、网站和数据分析需求。它只负责需求澄清和 PRD 草稿，不会修改代码、写入飞书、联系研发或自动上线。
+An extensible AI workflow toolkit for NuPhy teams. Its first capability turns vague operational requests into structured, Feishu-ready requirement entries and lightweight PRD drafts through focused clarification.
 
-## 能做什么
+NuPhy Toolkit follows a simple model: one shared plugin containing multiple focused Skills. New capabilities are added only after a real, repeated workflow has been validated. The current release provides requirement clarification and PRD drafting only; it does not change code, write to Feishu, contact engineering teams, or publish changes.
 
-- 对模糊需求进行逐步访谈，每次优先询问最影响范围和验收的问题。
-- 检查已有需求缺少哪些关键信息。
-- 在用户要求时跳过访谈，直接生成带缺口和假设的草稿。
-- 输出飞书需求池条目和轻量 PRD。
-- 区分已知事实、待补充信息和待确认假设。
-- 默认使用中文，也可以按要求输出英文。
+## What it does
 
-## 从 GitHub 安装
+- Clarifies ambiguous requests through focused, step-by-step questions.
+- Reviews existing requirements and identifies missing information.
+- Produces an immediate draft with explicit gaps and assumptions when the user wants to skip the interview.
+- Generates a Feishu-ready requirement entry and lightweight PRD draft.
+- Separates known facts, missing information, and assumptions requiring confirmation.
+- Uses Chinese by default and can produce English output on request.
 
-需要已安装支持 Plugins 的 ChatGPT 桌面版或 Codex CLI。
+## Install from GitHub
 
-### 方式一：直接添加 GitHub Marketplace
+You need a version of the ChatGPT desktop app or Codex CLI that supports plugins.
 
-```bash
-codex plugin marketplace add SZMOFEI/nuphy-prd-clarifier
-codex plugin add nuphy-prd-clarifier@nuphy-open-plugins
-```
-
-安装后请新建一个聊天，让新 Skill 生效。
-
-### 方式二：下载 ZIP 后安装
-
-1. 在 GitHub 仓库中选择 **Code → Download ZIP**，然后解压。
-2. 在终端执行：
+### Option 1: Add the GitHub marketplace directly
 
 ```bash
-codex plugin marketplace add /absolute/path/to/nuphy-prd-clarifier
-codex plugin add nuphy-prd-clarifier@nuphy-open-plugins
+codex plugin marketplace add SZMOFEI/nuphy-toolkit
+codex plugin add nuphy-toolkit@nuphy-open-plugins
 ```
 
-请把 `/absolute/path/to/nuphy-prd-clarifier` 换成解压后的仓库绝对路径。
+Start a new chat after installation so the new Skill is loaded.
 
-### 检查与更新
+### Option 2: Install from a downloaded ZIP
+
+1. Select **Code → Download ZIP** in this GitHub repository and extract it.
+2. Run:
+
+```bash
+codex plugin marketplace add /absolute/path/to/nuphy-toolkit
+codex plugin add nuphy-toolkit@nuphy-open-plugins
+```
+
+Replace `/absolute/path/to/nuphy-toolkit` with the absolute path to the extracted repository.
+
+### Check for updates
 
 ```bash
 codex plugin marketplace list
 codex plugin marketplace upgrade nuphy-open-plugins
 ```
 
-更新后重新安装插件并新建聊天：
+After upgrading, reinstall the plugin and start a new chat:
 
 ```bash
-codex plugin add nuphy-prd-clarifier@nuphy-open-plugins
+codex plugin add nuphy-toolkit@nuphy-open-plugins
 ```
 
-## 使用示例
+## Example prompts
 
-- `帮我把这条模糊需求澄清成可提交的需求卡。`
-- `一步步补齐这段运营需求，并生成 PRD 草稿。`
-- `检查这条需求还缺什么，输出飞书可粘贴版本。`
-- `先不要继续提问，直接基于现有信息生成草稿。`
+- `Help me clarify this vague request into a requirement card ready for review.`
+- `Fill in this operational request step by step and produce a PRD draft.`
+- `Review this requirement for missing information and return a Feishu-ready version.`
+- `Stop asking questions and draft it now using the available information.`
 
-## 输出内容
+## Current outputs
 
-1. 飞书需求池条目
-2. 轻量 PRD 草稿
-3. 待补充信息
-4. 待确认假设
+1. Feishu-ready requirement entry
+2. Lightweight PRD draft
+3. Missing information
+4. Assumptions requiring confirmation
 
-## 隐私与权限
+## Privacy and permissions
 
-- 不需要 NuPhy、飞书或其他第三方账号。
-- 不包含 MCP 服务，不向 NuPhy 服务器发送对话数据。
-- 不读取本地文件，除非用户主动在当前对话中提供。
-- 不应输入密码、API Key、支付信息、客户个人信息或其他秘密。
+- No NuPhy, Feishu, or other third-party account is required.
+- The current release contains no MCP server and sends no conversation data to NuPhy servers.
+- It does not read local files unless the user provides them in the current conversation.
+- Do not provide passwords, API keys, payment information, customer personal data, or other secrets.
 
-## 仓库结构
+## Repository structure
 
 ```text
 .agents/plugins/marketplace.json
-plugins/nuphy-prd-clarifier/
+plugins/nuphy-toolkit/
 ├── plugin.json
 ├── .codex-plugin/plugin.json
 ├── assets/
@@ -85,16 +87,10 @@ plugins/nuphy-prd-clarifier/
 └── tests/
 ```
 
-## 开发与验证
+## Development and validation
 
-插件主体位于 `plugins/nuphy-prd-clarifier`。提交更改前，应运行 OpenAI `skill-creator` 和 `plugin-creator` 提供的验证器，并确认 `tests/test-cases.json` 中的场景仍符合预期。
+The plugin source is in `plugins/nuphy-toolkit`. Keep each capability in an independently triggered and testable Skill, and add new capabilities only after their practical value has been validated. Before submitting changes, run the OpenAI `skill-creator` and `plugin-creator` validators and confirm that the relevant behavioral tests still pass.
 
 ## License
 
 MIT
-
----
-
-## English summary
-
-NuPhy PRD Clarifier turns vague operations requests into a Feishu-ready requirement entry and lightweight PRD through focused questions. Install it from this GitHub marketplace, start a new chat, and ask it to clarify a requirement. It has no external service, authentication, or automatic write capability.

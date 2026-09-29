@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "nuphy-prd-clarifier",
+      "name": "nuphy-toolkit",
       "source": {
         "source": "local",
-        "path": "./plugins/nuphy-prd-clarifier"
+        "path": "./plugins/nuphy-toolkit"
       },
       "policy": {
         "installation": "AVAILABLE",

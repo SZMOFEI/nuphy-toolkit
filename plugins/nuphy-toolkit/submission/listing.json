@@ -1,0 +1,16 @@
+{
+  "name": "NuPhy Toolkit",
+  "category": "Productivity",
+  "short_description": "Practical AI workflows for NuPhy teams.",
+  "long_description": "NuPhy Toolkit is an extensible collection of focused AI workflows for NuPhy teams. Its first skill guides teammates through step-by-step requirement clarification, identifies missing context, separates facts from assumptions, and outputs a Feishu-ready requirement entry plus a lightweight PRD draft. The current release does not change code, publish content, write to Feishu, or decide final priority and engineering complexity.",
+  "developer_name": "NuPhy",
+  "website_url": "https://nuphy.com/",
+  "support_url": "https://nuphy.com/pages/contact-us",
+  "privacy_policy_url": "https://nuphy.com/pages/privacy-policy",
+  "terms_url": "https://nuphy.com/pages/terms-conditions",
+  "logo": "../assets/icon.png",
+  "submission_type": "Skills only",
+  "authentication": "None",
+  "countries_and_regions": "Choose only regions supported by NuPhy legal and support teams in the submission portal.",
+  "screenshots": []
+}

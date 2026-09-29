@@ -1,21 +1,21 @@
 {
-  "name": "nuphy-prd-clarifier",
+  "name": "nuphy-toolkit",
   "version": "0.1.0",
-  "description": "Guides NuPhy operators from vague requests to reviewable requirement cards and PRD drafts.",
+  "description": "An extensible toolkit for NuPhy workflows, starting with requirement clarification.",
   "author": {
     "name": "NuPhy",
     "email": "service@nuphy.com",
     "url": "https://nuphy.com/"
   },
-  "homepage": "https://github.com/SZMOFEI/nuphy-prd-clarifier",
-  "repository": "https://github.com/SZMOFEI/nuphy-prd-clarifier",
+  "homepage": "https://github.com/SZMOFEI/nuphy-toolkit",
+  "repository": "https://github.com/SZMOFEI/nuphy-toolkit",
   "license": "MIT",
   "keywords": ["nuphy", "requirements", "prd", "product-operations"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "NuPhy PRD Clarifier",
-    "shortDescription": "Turn vague requests into clear requirement cards and PRD drafts.",
-    "longDescription": "Guides NuPhy operators through focused questions, identifies missing context, separates facts from assumptions, and produces copy-ready content for the Feishu requirement pool plus a lightweight PRD draft.",
+    "displayName": "NuPhy Toolkit",
+    "shortDescription": "Practical AI workflows for NuPhy teams.",
+    "longDescription": "An extensible collection of focused AI workflows for NuPhy teams. The first included skill clarifies vague requests, identifies missing context, and produces a Feishu-ready requirement entry plus a lightweight PRD draft.",
     "developerName": "NuPhy",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
